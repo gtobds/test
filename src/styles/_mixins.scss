@@ -1,0 +1,14 @@
+//@use '@/styles/variables' as v;
+
+@mixin inner{position:relative;width:v.$mx_w;margin:0 auto;}
+
+@mixin ellip($line:1){
+  @if($line == 1){
+    overflow:hidden;white-space:nowrap;text-overflow:ellipsis;
+  }@else{
+    overflow:hidden;display:-webkit-box !important;display:box !important;text-overflow:ellipsis;-webkit-line-clamp:$line;line-clamp:$line;-webkit-box-orient:vertical;box-orient:vertical;
+  }
+}
+
+@mixin en($s:0){letter-spacing:$s;}
+@mixin kr($s:-0.02rem){font-family:pretendard,sans-serif;letter-spacing:$s;}

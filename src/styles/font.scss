@@ -1,0 +1,22 @@
+@use '@/styles/dynamic_variables' as d;
+
+@font-face {
+  font-family: pretendard;
+	font-weight: 400;
+	font-display: auto;
+  src:url("#{d.$dynamic_variables}/asset/font/Pretendard-Regular.eot") format("eot");
+  src:
+		url("#{d.$dynamic_variables}/asset/font/Pretendard-Regular.eot?#iefix") format("embedded-opentype"),
+		url("#{d.$dynamic_variables}/asset/font/Pretendard-Regular.woff2") format("woff2"), 
+		url("#{d.$dynamic_variables}/asset/font/Pretendard-Regular.woff") format("woff");
+}
+@font-face {
+  font-family: pretendard;
+	font-weight: 600;
+	font-display: auto;
+	src:url("#{d.$dynamic_variables}/asset/font/Pretendard-SemiBold.eot") format("eot");
+  src:
+		url("#{d.$dynamic_variables}/asset/font/Pretendard-SemiBold.eot?#iefix") format("embedded-opentype"),
+		url("#{d.$dynamic_variables}/asset/font/Pretendard-SemiBold.woff2") format("woff2"), 
+		url("#{d.$dynamic_variables}/asset/font/Pretendard-SemiBold.woff") format("woff");
+}

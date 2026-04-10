@@ -1,0 +1,21 @@
+/* RESET CSS */
+html{overflow-y: scroll;font-size:62.5%;}
+html, body{width:100%;height:100%;margin:0;padding:0;border:0;-webkit-text-size-adjust:100%;-webkit-font-smoothing:antialiased;}
+div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td, legend, img, button{margin:0;padding:0;color:#191919;font-weight:400;font-size:1.3rem;line-height:normal;letter-spacing:-0.2px;font-family:pretendard,'Malgun Gothic','돋음',Dotum,'Apple SD Gothic Neo',sans-serif;}
+table{width:100%;max-width:none;table-layout:fixed;border-spacing:0;border-collapse:collapse;}
+form, fieldset, img{border:0;}
+address, caption, cite, code, dfn, em, th, var, i{font-weight:400;font-style:normal;}
+ol, ul, li{list-style:none;}
+h1, h2, h3, h4, h5, h6{font-size:100%;font-weight:400;color:#191919;}
+abbr, acronym{border:0;}
+hr{display:none;}
+a{display:block;font-family:inherit;text-decoration:none;color:#191919;}
+a:active{text-decoration:none;}
+a img{vertical-align:middle;}
+textarea{overflow:auto;box-sizing:border-box;width:100%;padding:15px;resize:none;border:1px solid #d3d3d3;color:#191919;}
+select{display:block;height:32px;padding:5px 24px 6px 8px;border:#D4D4D8 1px solid;color:#191919;font-weight:400;font-size:1.3rem;line-height:normal;letter-spacing:-0.2px;font-family: pretendard,'Malgun Gothic' '돋음', Dotum, 'Apple SD Gothic Neo', sans-serif;-webkit-background-clip:none;}
+input{vertical-align:middle;}
+button{display:block;overflow:visible;margin:0;padding:0;cursor:pointer;border:0;background:none;}
+legend, caption{overflow:hidden;width:1px;height:0;font-size:0;line-height:0;}
+header, footer, section, article, aside, nav, hgroup, details, menu, figure, figcaption, canvas, summary{display:block;}
+iframe{border:0;}
