@@ -31,6 +31,9 @@
     background: none;
     color: v.$c-gk;
   }
+  &.wish {
+    background-color: aqua;
+  }
   &:disabled {
     background: #fff;
   }

@@ -38,7 +38,7 @@ npm인스톨: Y  - 안했다면 test폴더 들어가서 npm install
 cd test
 
 npm add -D sass-embedded   SASS패키지
-npm install classnames  classnames 라이브러리
+npm install classnames       classnames 라이브러리
 
 
 npm run dev  서버스타트

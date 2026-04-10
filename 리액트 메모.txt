@@ -36,7 +36,7 @@ src/  실제작업폴더
 
 -styles/ _base.scss, _reset.scss, _variables.scss, _mixins.scss 등 전역(Global) 스타일 (나머지.scss는 각 콤포넌트 폴더에 jsx와 함께)
 
-*** 컴포넌트 Button.module.scss
+*** 컴포넌트명 Button.module.scss
 
 @use '../../styles/variables' as var;
 background-color: var.$p-color
@@ -61,21 +61,6 @@ font-size처럼 하이픈 불가 -->  fontSize 카멜케이스로 작성
 즉시실행함수
 (() => {/*코드*/})();
 
-((abc) =>{
-console.log(abc)
-})('hello')
-
-
-vscode - Reactjs code snippets설치
-단축키 
-rsf :리액트기본함수형  
-rsc :리액트화살표함수형
-
-nfn : const functionName = (params) => { } (named function)
-anfn : (params) => { } (anonymous function)
-clg : console.log() (덤으로 자주 쓰이는 단축키입니다.)
-
-
 import 컴포넌트명 frome '경로';
 리터문내부에 <컴포넌트명/>
 
@@ -85,11 +70,57 @@ HTML 태그는 소문자로 시작
 import { useState } from 'react'  리액트라이브러리에서 상태관리도구 useState사용
 
 
+---------------className ----------------------
+
+npm install classnames   라이브러리 설치 (해시값이 붙은 고유 클래스로 변환 - 컴포넌트마다 충돌방지)
+
+import classname from "classnames/bind";
+import css from "./Btn.module.scss";
+const cn = classname.bind(css);
+
+복수개 클래스
+className={cn("btn", size, type, add)}
+
+조건부 클래스
+className={cn('btn', size, { add: isAdd })}
+
+
 
 ------------Props----------------
 
 const (Constant): 재할당 불가능. (한 번 정하면 끝, 변하지 않는 상수에 사용)  - 컴포넌트, 함수, Props, State
 let: 재할당 가능. (값이 바뀔 수 있는 변수에 사용)  -  for문 , 숫자 등
+
+
+조건부 렌더링
+
+
+  {isLog ? (
+  <>
+    <모듈 />
+    <모듈2 />
+  </>
+  ) : (
+    <모듈3 />
+  )}
+
+
+else분기 필요없을시
+
+  {isLog && <모듈 />}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

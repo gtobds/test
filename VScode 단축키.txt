@@ -1,0 +1,20 @@
+vscode - Reactjs code snippets설치
+
+
+단축키 
+
+rsc :리액트화살표함수형
+nfn : const functionName = (params) => { } (named function)
+
+
+rsf :리액트기본함수형  
+anfn : (params) => { } (anonymous function)
+clg : console.log() (덤으로 자주 쓰이는 단축키입니다.)
+
+
+파일 > 기본설정 > 바로가기 키 > Emmet: Expand Abbreviation 에서 에밋 키 변경가능
+
+F1  상단 탐색창
+Ctrl + ,  설정
+Ctrl + Shift + `  터미널열기
+Ctrl + Space  코드 제안창을 다시 띄우기

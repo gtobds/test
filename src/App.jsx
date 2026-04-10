@@ -3,10 +3,7 @@ import React from "react";
 
 import "@/styles/font.scss";
 import "@/styles/reset.scss";
-
-import classname from "classnames/bind";
-import css from "@/components/layout/Layout.module.scss";
-const cn = classname.bind(css);
+import "@/styles/layout.scss";
 
 import Header from "@/components/layout/Header/Header.jsx";
 import Footer from "@/components/layout/Footer/Footer.jsx";
@@ -18,8 +15,8 @@ const App = () => {
   //const [count, setCount] = useState(0)
   return (
     <>
-      <div className={cn("wrap")}>
-        <div className={cn("container")}>
+      <div className="wrap">
+        <div className="container">
           <Header name={brd_name} />
           <Contents />
           <Footer />
