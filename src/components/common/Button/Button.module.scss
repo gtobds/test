@@ -1,0 +1,37 @@
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  height: 44px;
+  padding: 0 16px;
+  border: v.$c-gk 1px solid;
+  border-radius: 4px;
+  background: v.$c-gk;
+  color: #fff;
+  text-align: center;
+  em {
+    display: block;
+    overflow: hidden;
+    max-height: 40px;
+    line-height: 20px;
+  }
+  &.sd {
+    height: 36px;
+    padding: 0 12px;
+    em {
+      font-size: 13px;
+      line-height: 18px;
+    }
+  }
+  &.ln {
+    border: none;
+    border-bottom: v.$c-gk 1px solid;
+    border-radius: 0;
+    background: none;
+    color: v.$c-gk;
+  }
+  &:disabled {
+    background: #fff;
+  }
+}

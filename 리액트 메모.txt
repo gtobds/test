@@ -68,14 +68,19 @@ console.log(abc)
 
 vscode - Reactjs code snippets설치
 단축키 
-rsf 기본함수형  
-rsc 화살표함수형
+rsf :리액트기본함수형  
+rsc :리액트화살표함수형
 
+nfn : const functionName = (params) => { } (named function)
+anfn : (params) => { } (anonymous function)
+clg : console.log() (덤으로 자주 쓰이는 단축키입니다.)
 
 
 import 컴포넌트명 frome '경로';
 리터문내부에 <컴포넌트명/>
 
+React 컴포넌트 대문자로 시작 
+HTML 태그는 소문자로 시작
 
 import { useState } from 'react'  리액트라이브러리에서 상태관리도구 useState사용
 

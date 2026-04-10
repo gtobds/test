@@ -37,7 +37,9 @@ npm인스톨: Y  - 안했다면 test폴더 들어가서 npm install
 
 cd test
 
-npm add -D sass-embedded   SASS패키지 설치
+npm add -D sass-embedded   SASS패키지
+npm install classnames  classnames 라이브러리
+
 
 npm run dev  서버스타트
 
@@ -56,9 +58,11 @@ VScode & Git
 깃허브로 vscode 설정동기화
 
 vscode 소스제어에서 깃게시 - 커밋푸시(메시지없으면 커밋안됨)
-- 빌드된 dist폴더와 node모듈폴더는 자동으로 커밋안쳐짐
 
-다른컴에서 F1키 - git clone
+- 빌드된 dist폴더와 node모듈 폴더는 자동으로 커밋에서 제외됨
+
+
+다른컴에서 F1키 - git clone - 내가 게시한 git선택
 
 클론이후 해당폴더에 node모듈이 없으므로 npm install
 
