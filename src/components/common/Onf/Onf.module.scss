@@ -1,0 +1,48 @@
+:global {
+  .onf {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    label {
+      cursor: pointer;
+    }
+  }
+}
+.btOnf {
+  position: relative;
+  overflow: visible;
+  height: 18px;
+  width: 36px;
+  border-radius: 18px;
+  background: v.$c-bk;
+  @include m.transPr(background 0.05s);
+  &:before {
+    content: '';
+    @include m.bk_abs;
+    left: 0;
+    top: 0;
+    width: 16px;
+    height: 16px;
+    border: v.$c-bk 1px solid;
+    border-radius: 50%;
+    background: v.$c-fff;
+    @include m.transTm(0.12s);
+  }
+  &.on {
+    background: blue;
+    &:before {
+      border-color: blue;
+      transform: translate3d(18px, 0, 0);
+    }
+  }
+  &:disabled {
+    cursor: default;
+    background: #dedee4;
+    &:before {
+      border-color: #dedee4;
+    }
+    ~ label {
+      cursor: default;
+    }
+  }
+}

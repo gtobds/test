@@ -1,0 +1,26 @@
+.side-wing {
+  position: fixed;
+  bottom: 24px;
+  right: 36px;
+  z-index: 200;
+  transform: translateZ(0);
+  @include m.transPr(opacity 0.2s);
+  &-top a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border: 1px solid v.$c-dis;
+    border-radius: 4px;
+    background: #fff;
+    &:after {
+      content: '\2191';
+      display: block;
+      font-size: 20px;
+    }
+  }
+  &.is-top {
+    opacity: 0;
+  }
+}

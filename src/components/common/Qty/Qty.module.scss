@@ -1,0 +1,79 @@
+.qty {
+  display: block;
+  overflow: hidden;
+  position: relative;
+  width: 100px;
+  height: 36px;
+  padding: 0 36px;
+  border: 1px solid v.$c-dis;
+  border-radius: 4px;
+  box-sizing: border-box;
+  input {
+    display: block;
+    width: 28px;
+    height: 36px;
+    border: 0;
+    padding: 0;
+    background: none;
+    border: none;
+    outline: none;
+    font-weight: 600;
+    line-height: 36px;
+    text-align: center;
+    box-sizing: border-box;
+    &:disabled {
+      background: v.$c-light;
+      color: v.$c-info;
+    }
+  }
+  button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+    &:after {
+      font-size: 18px;
+      line-height: 18px;
+    }
+    &:disabled {
+      background: v.$c-light;
+      cursor: default;
+      &:after {
+        color: v.$c-info !important;
+      }
+    }
+  }
+  .minus {
+    left: 0;
+    &:after {
+      content: '-';
+      display: block;
+    }
+  }
+  .plus {
+    right: 0;
+    &:after {
+      content: '+';
+      display: block;
+    }
+  }
+  &.sd {
+    width: 82px;
+    height: 28px;
+    padding: 0 28px;
+    input {
+      width: 26px;
+      height: 28px;
+      font-size: 13px;
+      line-height: 28px;
+    }
+    button {
+      width: 28px;
+      height: 28px;
+    }
+  }
+}

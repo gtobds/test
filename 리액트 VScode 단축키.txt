@@ -1,0 +1,93 @@
+----------------vscode - 설치한 익스텐션 --------------
+
+ES7+ React/Redux/React-Native snippets
+HTML CSS Support
+Korean Language Pack for Visual Studio Code
+Prettier - Code formatter
+Reactjs code snippets
+Sass (.sass only)
+Path Intellisense
+Dracula Theme
+vscode-icons-mac
+
+-----------------vscode -  설정관련( Ctrl + , ) --------------
+
+bracket pairs
+color theme
+cusor blinking
+
+Terminal > Integrated  터미널 고정스크롤 사용 X
+파일 > 기본설정 > 바로가기 키 > Emmet: Expand Abbreviation 에서 에밋 키 변경가능
+
+settings.json ---------------------
+
+  글꼴
+  
+  "editor.fontWeight": "500",
+  "editor.fontFamily": "Verdana, D2Coding, Consolas, 'Courier New', monospace",
+  "editor.lineHeight": 1.6,
+  "editor.fontSize": 13,
+  "terminal.integrated.fontFamily": "Consolas",
+  "terminal.integrated.fontSize": 14,
+  "terminal.integrated.fontWeight": "400",
+  "terminal.integrated.letterSpacing": 1,
+
+
+jsconfig.json -----------------------------
+
+{
+  "compilerOptions": {
+    "ignoreDeprecations": "6.0",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    }
+  }
+}
+
+자동경로 추적을 위함
+
+
+package.json ----------------------------------
+
+  "prettier": {
+    "printWidth": 200,
+    "singleQuote": true,
+    "jsxSingleQuote": true,
+    "bracketSameLine": true,
+    "singleAttributePerLine": false
+  }
+
+  추가 - jsx 줄바꿈 방지
+
+
+----------------vscode - Reactjs code snippets설치
+
+https://github.com/r5n-labs/vscode-react-javascript-snippets/blob/HEAD/docs/Snippets.md
+
+
+단축키 
+
+rsc :리액트화살표함수형
+nfn : const functionName = (params) => { } (named function)
+
+enf : export const first = (second) => {third}
+
+rsf :리액트기본함수형  
+anfn : (params) => { } (anonymous function)
+clg : console.log()
+
+rcc 클래스형 component
+
+F1  상단 탐색창
+Ctrl + ,  설정
+Ctrl + Shift + `  터미널열기
+Ctrl + Space  코드 제안창을 다시 띄우기
+Alt + z  줄바꿈 보기 전환
+Alt + 클릭   원하는 위치에 직접 커서 찍기
+Shift + Alt  + 방향키 오른쪽 - "" 괄호 전체 선택
+Shift + Alt  + 방향키 위/아래  -  복사
+
+열린파일경로가져오기 - 경로입력부분으로 끌고 오면서 Shift키 누르면서 드롭다운
+
+

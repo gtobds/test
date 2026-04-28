@@ -1,0 +1,19 @@
+.main-menu {
+  margin-top: 20px;
+  ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    > li {
+      a {
+        font-weight: 600;
+        font-size: 15px;
+        &:hover,
+        &.active {
+          color: v.$c-green;
+        }
+      }
+    }
+  }
+}

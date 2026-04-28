@@ -1,9 +1,13 @@
-import React from 'react';
+import classname from 'classnames/bind';
+import css from './Footer.module.scss';
+const cx = classname.bind(css);
 
 function Footer() {
   return (
     <>
-      <div>푸터영역</div>
+      <div id='footer' className={cx('footer')}>
+        푸터영역
+      </div>
     </>
   );
 }

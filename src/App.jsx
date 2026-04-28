@@ -1,28 +1,22 @@
-import React from "react";
-//import { useState } from 'react'
+import React from 'react';
+import { RouterProvider } from 'react-router';
+//import { LayerProvider } from './contexts/layerContext';
+import { Layers } from '@/components/common/Layer/Layers.module.jsx';
 
-import "@/styles/font.scss";
-import "@/styles/reset.scss";
-import "@/styles/layout.scss";
+import Router from '@/routes/Routes';
 
-import Header from "@/components/layout/Header/Header.jsx";
-import Footer from "@/components/layout/Footer/Footer.jsx";
-import Contents from "@/components/layout/Contents/Contents.jsx";
-
-const brd_name = "AK";
+import '@/styles/font.scss';
+import '@/styles/reset.scss';
+import '@/styles/layout.scss';
 
 const App = () => {
-  //const [count, setCount] = useState(0)
   return (
-    <>
-      <div className="wrap">
-        <div className="container">
-          <Header name={brd_name} />
-          <Contents />
-          <Footer />
-        </div>
-      </div>
-    </>
+    //<LayerProvider>
+    <div className='wrap'>
+      <RouterProvider router={Router} />
+      <Layers />
+    </div>
+    //</LayerProvider>
   );
 };
 

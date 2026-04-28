@@ -1,0 +1,23 @@
+.gds-content {
+  padding: 50px 0;
+  .inp-set {
+    width: 400px;
+    margin: 20px auto 0;
+    > li {
+      margin-bottom: 16px;
+      :global {
+        .gds-inp {
+          input {
+            border-radius: 8px;
+          }
+          &-cnt span {
+            font-weight: 600;
+          }
+        }
+        .gds-onf + label {
+          color: blue;
+        }
+      }
+    }
+  }
+}

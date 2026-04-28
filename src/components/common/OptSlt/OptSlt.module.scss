@@ -1,0 +1,60 @@
+:global {
+  .btn_opt_slt {
+    position: relative;
+    .bt button {
+      display: block;
+      position: relative;
+      width: 100%;
+      height: 44px;
+      padding: 0 36px 0 12px;
+      border: 1px solid v.$c-sub;
+      background: #fff;
+      &[aria-pressed='true'] {
+        border-color: v.$c-gy;
+        border-bottom-color: v.$c-gy;
+        border-radius: 8px 8px 0 0;
+      }
+      span {
+        display: block;
+        line-height: 20px;
+        text-align: left;
+      }
+    }
+    .lyr {
+      display: none;
+      overflow: hidden;
+      position: absolute;
+      left: 0;
+      top: 44px;
+      z-index: 5;
+      height: 0;
+      width: 100%;
+      border: 1px solid v.$c-gy;
+      border-radius: 0 0 8px 8px;
+      border-top: none;
+      background: #fff;
+      box-sizing: border-box;
+      li {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 8px;
+        &:hover {
+          background: v.$c-light;
+        }
+        a {
+          width: 100%;
+          padding: 12px 12px;
+          &[aria-selected='true'] {
+            color: red;
+            font-weight: 600;
+          }
+        }
+        .side {
+          padding-right: 12px;
+          flex: none;
+        }
+      }
+    }
+  }
+}

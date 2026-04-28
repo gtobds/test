@@ -1,10 +1,60 @@
 //@use '@/styles/variables' as v;
 //@use '@/styles/mixins' as m;
 
-.header{width: 100%;background: v.$c-light;
-  &:hover{background: v.$c-dis;}
-  .head{@include m.kr;}
+.header {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  width: 100%;
+  background: v.$c-light;
+  //&:hover {
+  //  background: v.$c-dis;
+  //}
+  &.hd-compact {
+    position: fixed;
+    z-index: 100;
+    background: #dbdbdb;
+    :global {
+      .btn-set {
+        display: none;
+      }
+    }
+    h1 a {
+      display: flex;
+      justify-content: center;
+    }
+    .head-gnb {
+      display: none;
+    }
+  }
+  .head {
+    @include m.kr;
+    &-logo {
+      &__sub {
+        margin-left: 16px;
+        color: rgb(32, 172, 32);
+        font-size: 16px;
+      }
+    }
+    &-gnb {
+      margin-top: 20px;
+      ul {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+        > li {
+          a {
+            font-weight: 600;
+            font-size: 15px;
+            &:hover,
+            &.active {
+              color: v.$c-red;
+            }
+          }
+        }
+      }
+    }
+  }
 }
-
-
-

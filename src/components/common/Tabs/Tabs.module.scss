@@ -1,0 +1,32 @@
+:global {
+  .gtTabs {
+    .tablist {
+      display: flex;
+      width: 100%;
+      > button {
+        flex: 1;
+        &[aria-selected='true'] {
+          em {
+            color: red;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+  }
+  .panel {
+    padding: 20px 0;
+    h3 {
+      display: block;
+      margin-bottom: 16px;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 30px;
+      text-align: center;
+    }
+    div {
+      font-size: 13px;
+      line-height: 18px;
+    }
+  }
+}

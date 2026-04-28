@@ -1,14 +1,82 @@
 //@use '@/styles/variables' as v;
 
-@mixin inner{position:relative;width:v.$mx_w;margin:0 auto;}
+@mixin inner {
+  position: relative;
+  width: v.$mx_w;
+  margin: 0 auto;
+}
 
-@mixin ellip($line:1){
-  @if($line == 1){
-    overflow:hidden;white-space:nowrap;text-overflow:ellipsis;
-  }@else{
-    overflow:hidden;display:-webkit-box !important;display:box !important;text-overflow:ellipsis;-webkit-line-clamp:$line;line-clamp:$line;-webkit-box-orient:vertical;box-orient:vertical;
+@mixin ellip($line: 1) {
+  @if ($line == 1) {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  } @else {
+    overflow: hidden;
+    display: -webkit-box !important;
+    display: box !important;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: $line;
+    line-clamp: $line;
+    -webkit-box-orient: vertical;
+    box-orient: vertical;
   }
 }
 
-@mixin en($s:0){letter-spacing:$s;}
-@mixin kr($s:-0.02rem){font-family:pretendard,sans-serif;letter-spacing:$s;}
+@mixin en($s: 0) {
+  letter-spacing: $s;
+}
+@mixin kr($s: -0.02rem) {
+  font-family: pretendard, sans-serif;
+  letter-spacing: $s;
+}
+
+@mixin transPr($prop) {
+  -webkit-transition: $prop;
+  -moz-transition: $prop;
+  -o-transition: $prop;
+  -ms-transition: $prop;
+  transition: $prop;
+}
+@mixin transTm($time) {
+  -webkit-transition: -webkit-transform $time;
+  transition: -webkit-transform $time;
+  transition: transform $time;
+  transition:
+    transform $time,
+    -webkit-transform $time;
+}
+
+@mixin fix_bk {
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
+@mixin hid_rel {
+  overflow: hidden;
+  position: relative;
+}
+@mixin hid_abs {
+  overflow: hidden;
+  position: absolute;
+}
+@mixin hid_clr {
+  overflow: hidden;
+  clear: both;
+}
+@mixin bk_rel {
+  display: block;
+  position: relative;
+}
+@mixin bk_abs {
+  display: block;
+  position: absolute;
+}
+@mixin bk_clr {
+  display: block;
+  clear: both;
+}
+@mixin bk_hid {
+  display: block;
+  overflow: hidden;
+}
