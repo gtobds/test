@@ -1,22 +1,22 @@
-import classname from "classnames/bind";
-import css from "./Main.module.scss";
-const cx = classname.bind(css);
+import classname from 'classnames/bind';
+import scss from './Main.module.scss';
+const cx = classname.bind(scss);
 
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 // Swiper 스타일 (필수)
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
 const MainCont = () => {
   return (
     <>
-      <div className={cx("mn-cont")}>
-        <div className={cx("mn-cont__title")}>
+      <div className={cx('mn-cont')}>
+        <div className={cx('mn-cont__title')}>
           <h2>메인 Swiper</h2>
         </div>
-        <div className={cx("mn-cont__slide")}>
+        <div className={cx('mn-cont__slide')}>
           <Swiper
             modules={[Navigation, Pagination, Autoplay]}
             spaceBetween={0}
@@ -25,17 +25,29 @@ const MainCont = () => {
             pagination={{ clickable: true }}
             //autoplay={{ delay: 3000 }}
             //onSlideChange={() => console.log("슬라이드 변경")}
-            loop={true}
-          >
+            loop={true}>
             <SwiperSlide>
-              <img src={"/images/temp/plnDtl_beauty_6.jpg"} alt="배너 1" />
+              <img src={'/images/temp/plnDtl_beauty_6.jpg'} alt='배너 1' />
             </SwiperSlide>
             <SwiperSlide>
-              <img src={"/images/temp/plnDtl_beauty_7.jpg"} alt="배너 2" />
+              <img src={'/images/temp/plnDtl_beauty_7.jpg'} alt='배너 2' />
             </SwiperSlide>
           </Swiper>
         </div>
       </div>
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
     </>
   );
 };

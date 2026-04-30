@@ -5,8 +5,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useScrollLock } from '@/hooks/useScrollLock.jsx';
 
 import classname from 'classnames/bind';
-import css from '@/components/common/Layer/Layer.module.scss';
-const cx = classname.bind(css);
+import scss from '@/components/common/Layer/Layer.module.scss';
+const cx = classname.bind(scss);
 
 const LayerContext = createContext(null);
 

@@ -1,0 +1,10 @@
+{
+  "scss": {
+    "snippets": {
+      "bd": "border: ${1};",
+
+      "flexc": "display: flex; align-items: ${1:center}; justify-content: ${2:center};",
+      "bgu": "background: url('${1}') no-repeat center / cover;"
+    }
+  }
+}

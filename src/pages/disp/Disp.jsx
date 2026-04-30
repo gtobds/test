@@ -3,7 +3,7 @@ import { Outlet } from 'react-router';
 
 import Header from '@/components/layout/Header/Header.jsx';
 import Footer from '@/components/layout/Footer/Footer.jsx';
-
+import Wing from '@/components/common/Wing/Wing.module';
 import Menu from '@/pages/disp/module/Menu.module.jsx';
 
 const brd_name = 'AK';
@@ -20,6 +20,7 @@ const Disp = () => {
         <Outlet />
 
         <Footer />
+        <Wing />
       </div>
     </>
   );

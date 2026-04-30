@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 /* RESET CSS */
 html {
   overflow-y: scroll;
@@ -10,8 +12,10 @@ body {
   margin: 0;
   padding: 0;
   border: 0;
+  background: v.$c-fff;
   -webkit-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
+  overscroll-behavior: contain;
 }
 div,
 dl,
@@ -37,15 +41,22 @@ th,
 td,
 legend,
 img,
-button {
+button,
+select {
   margin: 0;
   padding: 0;
-  color: #191919;
+  color: v.$c-gk;
   font-weight: 400;
-  font-size: 1.3rem;
+  font-size: 14px;
   line-height: normal;
-  letter-spacing: -0.2px;
-  font-family: pretendard, 'Malgun Gothic', '돋음', Dotum, 'Apple SD Gothic Neo', sans-serif;
+  font-family: pretendard, 'Malgun Gothic', 'Apple SD Gothic Neo', sans-serif;
+  letter-spacing: -0.02rem;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+b,
+strong {
+  font-weight: 600;
 }
 table {
   width: 100%;
@@ -76,16 +87,6 @@ ul,
 li {
   list-style: none;
 }
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-size: 100%;
-  font-weight: 400;
-  color: #191919;
-}
 abbr,
 acronym {
   border: 0;
@@ -97,7 +98,7 @@ a {
   display: block;
   font-family: inherit;
   text-decoration: none;
-  color: #191919;
+  color: v.$c-gk;
 }
 a:active {
   text-decoration: none;
@@ -111,26 +112,22 @@ textarea {
   width: 100%;
   padding: 15px;
   resize: none;
-  border: 1px solid #d3d3d3;
-  color: #191919;
 }
 select {
   display: block;
-  height: 32px;
-  padding: 5px 24px 6px 8px;
-  border: #d4d4d8 1px solid;
-  color: #191919;
-  font-weight: 400;
-  font-size: 1.3rem;
-  line-height: normal;
-  letter-spacing: -0.2px;
-  font-family:
-    pretendard,
-    'Malgun Gothic' '돋음',
-    Dotum,
-    'Apple SD Gothic Neo',
-    sans-serif;
+  position: relative;
+  width: 100%;
   -webkit-background-clip: none;
+  -o-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  &::-ms-expand {
+    display: none;
+  }
 }
 input {
   vertical-align: middle;
@@ -143,11 +140,14 @@ button {
   cursor: pointer;
   border: 0;
   background: none;
+  * {
+    pointer-events: none;
+  }
 }
 legend,
 caption {
   overflow: hidden;
-  width: 1px;
+  width: 0;
   height: 0;
   font-size: 0;
   line-height: 0;
@@ -169,4 +169,109 @@ summary {
 }
 iframe {
   border: 0;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+input[type='text'],
+input[type='password'],
+input[type='search'],
+input[type='number'] {
+  display: inline-block;
+  resize: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+input[type='file']::file-selector-button {
+  display: none;
+}
+input[type='search']::-webkit-search-cancel-button {
+  display: none;
+  width: 0;
+  height: 0;
+}
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+input::-ms-clear,
+input::-webkit-search-cancel-button,
+input::-webkit-clear-button {
+  display: none;
+  margin: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+input:is(:-webkit-autofill, :autofill) {
+  -webkit-box-shadow: 0 0 0 1000px #fff inset;
+}
+
+//PLACEHOLDER
+input[type='text'] {
+  text-overflow: ellipsis;
+}
+input[type='text'].placeholder {
+  color: v.$c-bbb;
+}
+input[type='text']::-webkit-input-placeholder {
+  color: v.$c-bbb;
+}
+input[type='text']:-moz-placeholder {
+  color: v.$c-bbb;
+}
+input[type='text']::-moz-placeholder {
+  color: v.$c-bbb;
+}
+input[type='text']:-ms-input-placeholder {
+  color: v.$c-bbb;
+}
+//input[type=text]:placeholder-shown{text-overflow:ellipsis;}
+textarea.placeholder {
+  color: v.$c-bbb;
+}
+textarea::-webkit-input-placeholder {
+  color: v.$c-bbb;
+}
+textarea:-moz-placeholder {
+  color: v.$c-bbb;
+}
+textarea::-moz-placeholder {
+  color: v.$c-bbb;
+}
+textarea:-ms-input-placeholder {
+  color: v.$c-bbb;
+}
+input[type='password'].placeholder {
+  color: v.$c-bbb;
+}
+input[type='password']::-webkit-input-placeholder {
+  color: v.$c-bbb;
+}
+input[type='password']:-moz-placeholder {
+  color: v.$c-bbb;
+}
+input[type='password']::-moz-placeholder {
+  color: v.$c-bbb;
+}
+input[type='password']:-ms-input-placeholder {
+  color: v.$c-bbb;
+}
+input::-ms-clear {
+  display: none !important;
+  width: 0;
+  height: 0;
+}
+input::-ms-reveal {
+  display: none !important;
+  width: 0;
+  height: 0;
 }

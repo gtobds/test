@@ -1,0 +1,33 @@
+.ntcLst {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  &-tit {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 22px;
+    word-break: keep-all;
+  }
+  li,
+  span {
+    display: block;
+    position: relative;
+    padding-left: 12px;
+    color: v.$c-sb;
+    line-height: 20px;
+    word-break: keep-all;
+    &:before {
+      content: '';
+      position: absolute;
+      left: 4px;
+      top: 9px;
+      display: block;
+      width: 2px;
+      height: 2px;
+      border-radius: 100%;
+      background: v.$c-sb;
+    }
+  }
+}

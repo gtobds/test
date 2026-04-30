@@ -1,7 +1,7 @@
 import React from 'react';
 import { RouterProvider } from 'react-router';
 //import { LayerProvider } from './contexts/layerContext';
-import { Layers } from '@/components/common/Layer/Layers.module.jsx';
+import { Layers } from '@/components/common/Layers/Layers.module.jsx';
 
 import Router from '@/routes/Routes';
 

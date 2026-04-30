@@ -4,7 +4,8 @@
   right: 36px;
   z-index: 200;
   transform: translateZ(0);
-  @include m.transPr(opacity 0.2s);
+  opacity: 1;
+  @include x.transPr(opacity 0.2s);
   &-top a {
     display: flex;
     align-items: center;
@@ -22,5 +23,10 @@
   }
   &.is-top {
     opacity: 0;
+    pointer-events: none;
+    user-select: none;
+  }
+  &.is-btm {
+    opacity: 1;
   }
 }

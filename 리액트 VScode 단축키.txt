@@ -19,6 +19,9 @@ cusor blinking
 Terminal > Integrated  터미널 고정스크롤 사용 X
 파일 > 기본설정 > 바로가기 키 > Emmet: Expand Abbreviation 에서 에밋 키 변경가능
 
+editor.wordSeparators
+ - # ! $  제거 : 더블클릭으로 문자열 선택할수있게...
+
 settings.json ---------------------
 
   글꼴
@@ -82,11 +85,15 @@ rcc 클래스형 component
 F1  상단 탐색창
 Ctrl + ,  설정
 Ctrl + Shift + `  터미널열기
+Ctrl + Shift + H  프로젝트 파일 전체 바꾸기
 Ctrl + Space  코드 제안창을 다시 띄우기
 Alt + z  줄바꿈 보기 전환
 Alt + 클릭   원하는 위치에 직접 커서 찍기
 Shift + Alt  + 방향키 오른쪽 - "" 괄호 전체 선택
 Shift + Alt  + 방향키 위/아래  -  복사
+
+
+폴더탐색창 Alt + 클릭  하위폴더 모두 닫기
 
 열린파일경로가져오기 - 경로입력부분으로 끌고 오면서 Shift키 누르면서 드롭다운
 

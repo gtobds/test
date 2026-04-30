@@ -4,8 +4,8 @@ import { useLayerStore } from '@/stores/useLayerStore';
 import { useScrollTop } from '@/hooks/useScrollTop.jsx';
 
 import classname from 'classnames/bind';
-import css from './Header.module.scss';
-const cx = classname.bind(css);
+import scss from './Header.module.scss';
+const cx = classname.bind(scss);
 
 import Gnb from '@/components/layout/Header/Gnb.module.jsx';
 import Btn from '@/components/common/Btn/Btn.module.jsx';

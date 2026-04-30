@@ -1,8 +1,8 @@
 import { useEffect, useId, useState } from 'react';
 
 import classname from 'classnames/bind';
-import css from './Qty.module.scss';
-const cx = classname.bind(css);
+import scss from './Qty.module.scss';
+const cx = classname.bind(scss);
 
 const Qty = ({ val = 0, min = 0, max, classNm, size, disabled }) => {
   const idu = useId();

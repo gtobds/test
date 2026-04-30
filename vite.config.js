@@ -1,6 +1,6 @@
-import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react";
-import path from "path"; // 1. path 모듈 가져오기
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import path from 'path'; // 1. path 모듈 가져오기
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -10,7 +10,7 @@ export default defineConfig({
     alias: {
       // 2. "@"를 입력하면 "src" 폴더를 가리키도록 설정
       //"@": path.resolve(__dirname, "./src"),
-      "@": path.resolve("./src"),
+      '@': path.resolve('./src'),
     },
   },
   /*
@@ -29,8 +29,7 @@ export default defineConfig({
     preprocessorOptions: {
       scss: {
         //scss 파일 전역에서 @use사용
-        additionalData:
-          '@use "@/styles/variables" as v;@use "@/styles/mixins" as m;',
+        additionalData: '@use "@/styles/variables" as v;@use "@/styles/mixins" as x;',
       },
     },
     devSourcemap: true, // 개발 모드 소스맵

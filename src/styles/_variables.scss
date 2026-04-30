@@ -45,3 +45,61 @@ $side_m: 24px; //side margin
 
 //scrollbar width
 $s-bar: 5px;
+
+$c-blue: #486af4;
+$c-green: #04b014;
+$c-red: #ed1c24;
+$c-bk: #191919;
+$c-gk: #181a1d; //default
+$c-sb: #54565b; //sub
+
+$c-def: $c-gk;
+$c-sub: #9fa2aa;
+$c-deep: #f1f1f5;
+$c-strong: #37393c;
+$c-light: #f8f8fa;
+$c-info: #74767c;
+$c-dis: #dedee4;
+$c-bd: #ecedf2;
+
+$c-gy900: $c-gk; //default
+$c-gy800: $c-strong; //strong/black
+$c-gy700: $c-sb; //sub
+$c-gy600: #686a70;
+$c-gy500: $c-info; //info
+$c-gy400: #b1b3b8; //placeholder/disabled
+$c-gy300: $c-dis; //disabled/deep_button
+$c-gy200: $c-bd; //default_conbox
+$c-gy100: #f1f1f5; //deep
+$c-gy50: $c-light; //light
+
+$c-gy1: #f4f7fa;
+$c-gy2: #f4f4f4;
+$c-gy3: #f5f5f5;
+$c-gy4: #bcc1c3;
+$c-gy5: #d8dde0;
+$c-gy6: #d1d8de;
+$c-gy7: #dbe4ed;
+
+$c-000: #000000;
+$c-222: #222222;
+$c-333: #333333;
+$c-666: #666666;
+$c-888: #888888;
+$c-999: #999999;
+
+$c-bbb: #bbbbbb;
+$c-ccc: #cccccc;
+$c-ddd: #dddddd;
+$c-eee: #eeeeee;
+$c-fff: #ffffff;
+
+$imgUrl: '@/assets/images/';
+$imgCmn: '@/assets/images/common/';
+$imgMain: '@/assets/images/main/';
+$imgGds: '@/assets/images/gds/';
+$imgDisp: '@/assets/images/disp/';
+$imgOdr: '@/assets/images/odr/';
+$imgMys: '@/assets/images/mys/';
+$imgMem: '@/assets/images/mem/';
+$imgCst: '@/assets/images/cst/';

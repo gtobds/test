@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-export function useInput(val, { max = Infinity } = {}) {
+export function useInput(val, { max = Infinity } = {}, inpRef) {
   const [value, setValue] = useState(val);
 
   const onChange = (e) => {
@@ -11,7 +11,10 @@ export function useInput(val, { max = Infinity } = {}) {
     }
   };
 
-  const clear = () => setValue('');
+  const clear = () => {
+    setValue('');
+    inpRef.current.focus();
+  };
 
   return {
     value,

@@ -1,4 +1,4 @@
-//@use '@/styles/variables' as v;
+@use '@/styles/variables' as v;
 
 @mixin inner {
   position: relative;
@@ -21,6 +21,18 @@
     -webkit-box-orient: vertical;
     box-orient: vertical;
   }
+}
+
+@mixin bgCmn($pos) {
+  background: url(v.$imgCmn + 'ico_common.svg') no-repeat $pos;
+}
+@mixin bgCmn_mask($pos) {
+  mask: url(v.$imgCmn + 'ico_common.svg') no-repeat $pos;
+  -webkit-mask: url(v.$imgCmn + 'ico_common.svg') no-repeat $pos;
+}
+@mixin pos($pos) {
+  -webkit-mask-position: $pos;
+  mask-position: $pos;
 }
 
 @mixin en($s: 0) {
@@ -79,4 +91,62 @@
 @mixin bk_hid {
   display: block;
   overflow: hidden;
+}
+
+@mixin rotate($a) {
+  -webkit-transform: rotate($a + deg);
+  transform: rotate($a + deg);
+}
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  filter: alpha(opacity=$opacity * 100);
+}
+
+@mixin arr_12($color: v.$c-def, $a: 0) {
+  width: 12px;
+  height: 12px;
+  background: $color;
+  mask: url(v.$imgCmn + 'arrow_12.svg') no-repeat 0 0;
+  -webkit-mask: url(v.$imgCmn + 'arrow_12.svg') no-repeat 0 0;
+  transform: rotate($a + deg);
+}
+@mixin arr_16($color: v.$c-def, $a: 0) {
+  width: 16px;
+  height: 16px;
+  background: $color;
+  mask: url(v.$imgCmn + 'arrow_16.svg') no-repeat 0 0;
+  -webkit-mask: url(v.$imgCmn + 'arrow_16.svg') no-repeat 0 0;
+  transform: rotate($a + deg);
+}
+@mixin arr_20($color: v.$c-def, $a: 0) {
+  width: 20px;
+  height: 20px;
+  background: $color;
+  mask: url(v.$imgCmn + 'arrow_20.svg') no-repeat 0 0;
+  -webkit-mask: url(v.$imgCmn + 'arrow_20.svg') no-repeat 0 0;
+  transform: rotate($a + deg);
+}
+@mixin arr_24($color: v.$c-def, $a: 0) {
+  width: 24px;
+  height: 24px;
+  background: $color;
+  mask: url(v.$imgCmn + 'arrow_24.svg') no-repeat 0 0;
+  -webkit-mask: url(v.$imgCmn + 'arrow_24.svg') no-repeat 0 0;
+  transform: rotate($a + deg);
+}
+@mixin arr_48($color: v.$c-def, $a: 0) {
+  width: 48px;
+  height: 48px;
+  background: $color;
+  mask: url(v.$imgCmn + 'arrow_48.svg') no-repeat 0 0;
+  -webkit-mask: url(v.$imgCmn + 'arrow_48.svg') no-repeat 0 0;
+  transform: rotate($a + deg);
+}
+@mixin arr_56($color: v.$c-def, $a: 0) {
+  width: 56px;
+  height: 56px;
+  background: $color;
+  mask: url(v.$imgCmn + 'arrow_56.svg') no-repeat 0 0;
+  -webkit-mask: url(v.$imgCmn + 'arrow_56.svg') no-repeat 0 0;
+  transform: rotate($a + deg);
 }

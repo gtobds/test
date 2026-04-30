@@ -3,9 +3,9 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useLayerStore } from '@/stores/useLayerStore.jsx';
 import { useScrollLock } from '@/hooks/useScrollLock.jsx';
 import classname from 'classnames/bind';
-import css from '@/components/common/Layer/Layers.module.scss';
+import scss from '@/components/common/Layers/Layers.module.scss';
 
-const cx = classname.bind(css);
+const cx = classname.bind(scss);
 
 export function Layers() {
   const { layers, closeLayer } = useLayerStore();

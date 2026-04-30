@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import classname from 'classnames/bind';
-import css from './Tabs.module.scss';
-const cx = classname.bind(css);
+import scss from './Tabs.module.scss';
+const cx = classname.bind(scss);
 
 const Tabs = ({ id, tabs, classNm, classBt, start = 0, panelPrefix, onTabChange }) => {
   const [activeIdx, setActiveIdx] = useState(start);

@@ -72,7 +72,7 @@ body * {
 }
 .ellip {
   display: block;
-  @include m.ellip(1);
+  @include x.ellip(1);
 }
 .scrOff {
   body {
@@ -107,4 +107,11 @@ body * {
   &:has(.ssd) {
     gap: 4px;
   }
+}
+
+.chk-set {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px 30px;
 }

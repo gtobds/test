@@ -3,10 +3,10 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useOutsideClick } from '@/hooks/useOutsideClick';
 
 import classname from 'classnames/bind';
-import css from './OptSlt.module.scss';
-const cx = classname.bind(css);
+import scss from './OptSlt.module.scss';
+const cx = classname.bind(scss);
 
-const OptSlt = ({ id, options, select = 0, lyrSpeed = 0 }) => {
+const OptSlt = ({ id, options, classNm, select = 0, lyrSpeed = 0 }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedIdx, setSelectedIdx] = useState(select);
   const idu = useId();
@@ -27,7 +27,7 @@ const OptSlt = ({ id, options, select = 0, lyrSpeed = 0 }) => {
 
   return (
     <>
-      <div className={cx('btn_opt_slt')} role='combobox' aria-expanded={isOpen} ref={sltRef}>
+      <div className={cx('btn_opt_slt', classNm)} role='combobox' aria-expanded={isOpen} ref={sltRef}>
         <div className={cx('bt')}>
           <button type='button' aria-controls={id} aria-pressed={isOpen} onClick={toggleDropdown}>
             <span>{options[selectedIdx].label}</span>

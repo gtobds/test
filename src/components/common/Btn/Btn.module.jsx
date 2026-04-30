@@ -1,8 +1,8 @@
 import React, { useState, useRef } from 'react';
 
 import classname from 'classnames/bind';
-import css from './Btn.module.scss';
-const cx = classname.bind(css);
+import scss from './Btn.module.scss';
+const cx = classname.bind(scss);
 
 const Btn = ({ size = '', type = '', add = '', text = '', onClick, btnRef, press, cart }) => {
   const [isPressed, setIsPressed] = useState(false);

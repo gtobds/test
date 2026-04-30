@@ -15,10 +15,10 @@
   width: 36px;
   border-radius: 18px;
   background: v.$c-bk;
-  @include m.transPr(background 0.05s);
+  @include x.transPr(background 0.05s);
   &:before {
     content: '';
-    @include m.bk_abs;
+    @include x.bk_abs;
     left: 0;
     top: 0;
     width: 16px;
@@ -26,7 +26,7 @@
     border: v.$c-bk 1px solid;
     border-radius: 50%;
     background: v.$c-fff;
-    @include m.transTm(0.12s);
+    @include x.transTm(0.12s);
   }
   &.on {
     background: blue;
