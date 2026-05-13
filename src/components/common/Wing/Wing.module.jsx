@@ -1,5 +1,5 @@
 import { animate } from 'framer-motion';
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useState } from 'react';
 import { usePosStore } from '@/stores/usePosStore';
 
 import classname from 'classnames/bind';
@@ -11,7 +11,6 @@ const Wing = () => {
   const [isBtm, setIsBtm] = useState(false);
 
   const htm = document.documentElement;
-  const wingRef = useRef(null);
 
   const funcTop = () => {
     htm.classList.add('isScroll');
@@ -29,7 +28,7 @@ const Wing = () => {
   const btmStyle = isBtm
     ? {
         position: 'absolute',
-        bottom: getFootHeight + parseInt(wingRef.current.style.bottom) + 'px',
+        bottom: getFootHeight + 24 + 'px',
       }
     : {
         position: 'fixed',
@@ -50,10 +49,19 @@ const Wing = () => {
       }
     };
 
+    // const observer = new ResizeObserver(() => {
+    //   fnScroll();
+    //   console.log('observer');
+    // });
+    // if (document.querySelector('.container')) {
+    //   observer.observe(document.querySelector('.container'));
+    // }
+
     //window.addEventListener('load', fnScroll);
     window.addEventListener('scroll', fnScroll);
     window.addEventListener('resize', fnScroll);
     return () => {
+      //observer.disconnect();
       //window.removeEventListener('load', fnScroll);
       window.removeEventListener('scroll', fnScroll);
       window.removeEventListener('resize', fnScroll);
@@ -62,7 +70,7 @@ const Wing = () => {
 
   return (
     <>
-      <div ref={wingRef} className={cx('side-wing', { 'is-top': isTop }, { 'is-btm': isBtm })} style={btmStyle}>
+      <div className={cx('side-wing', { 'is-top': isTop }, { 'is-btm': isBtm })} style={btmStyle}>
         <div className={cx('side-wing-top')}>
           <a href='#' role='button' aria-label='맨위로 이동' onClick={funcTop}></a>
         </div>

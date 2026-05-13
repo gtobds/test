@@ -1,0 +1,41 @@
+.tree {
+  &-menu {
+    display: block;
+    padding: 16px;
+    border: 1px solid v.$c-dis;
+    border-radius: 4px;
+  }
+  &-bt {
+    button {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      padding: 2px 0;
+      font-size: 15px;
+      line-height: 21px;
+      &.arrow {
+        &:after {
+          content: '';
+          display: block;
+          @include x.arr_12(v.$c-gy);
+        }
+        &.exp:after {
+          @include x.rotate(180);
+        }
+      }
+      &[aria-selected='true'] {
+        &:after {
+          background: blue;
+        }
+        em {
+          font-weight: 600;
+          color: blue;
+        }
+      }
+    }
+  }
+  &-bx {
+    overflow: hidden;
+    padding-left: 16px;
+  }
+}

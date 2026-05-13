@@ -1,0 +1,29 @@
+.gdsList {
+  position: relative;
+  &-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: flex-start;
+    gap: 40px 20px;
+  }
+  > ul > li {
+    float: left;
+    width: calc((100% - 60px) / 4);
+    box-sizing: border-box;
+  }
+  .gdInfo {
+    > a {
+      padding: 16px 28px 0 0;
+    }
+    [class*='gdsPrice'] {
+      margin-top: 8px;
+    }
+    [class*='gdsTags'] {
+      margin-top: 12px;
+    }
+    [class*='gdsEtc'] {
+      margin-top: 8px;
+    }
+  }
+}

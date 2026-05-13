@@ -1,0 +1,15 @@
+.gdsEtc {
+  display: block;
+  &-st {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    &:before {
+      @include x.p_ico(16px, -52px 0, v.$c-gy400);
+    }
+    em {
+      color: v.$c-sb;
+      @include x.e12;
+    }
+  }
+}

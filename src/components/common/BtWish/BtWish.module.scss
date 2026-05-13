@@ -1,0 +1,20 @@
+.sp-wish {
+  width: 32px;
+  height: 32px;
+  background: url(v.$imgCmn + 'btn_wish.svg') no-repeat 0 0;
+  background-size: 100%;
+  mix-blend-mode: multiply;
+  &[aria-pressed='true'] {
+    background: v.$c-gk;
+    -webkit-mask-image: url(v.$imgCmn + 'btn_wish_on.svg');
+    mask-image: url(v.$imgCmn + 'btn_wish_on.svg');
+    -webkit-mask-size: 100%;
+    mask-size: 100%;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    mix-blend-mode: normal;
+    [data-point='p-color_0'] & {
+      background: blue;
+    }
+  }
+}

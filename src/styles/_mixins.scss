@@ -34,6 +34,21 @@
   -webkit-mask-position: $pos;
   mask-position: $pos;
 }
+@mixin ico($size, $pos, $bg: false) {
+  width: $size;
+  height: $size;
+  @if ($bg) {
+    background: $bg;
+    @include bgCmn_mask($pos);
+  } @else {
+    @include bgCmn($pos);
+  }
+}
+@mixin p_ico($size, $pos, $bg: false) {
+  content: '';
+  display: block;
+  @include ico($size, $pos, $bg);
+}
 
 @mixin en($s: 0) {
   letter-spacing: $s;
@@ -149,4 +164,290 @@
   mask: url(v.$imgCmn + 'arrow_56.svg') no-repeat 0 0;
   -webkit-mask: url(v.$imgCmn + 'arrow_56.svg') no-repeat 0 0;
   transform: rotate($a + deg);
+}
+
+//---flex
+@mixin flex_center {
+  display: flex;
+  align-items: center;
+}
+@mixin flex_center_center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@mixin flex_start {
+  display: flex;
+  align-items: flex-start;
+}
+@mixin flexend {
+  display: flex;
+  align-items: flex-end;
+}
+@mixin flex_space {
+  display: flex;
+  justify-content: space-between;
+}
+@mixin flex_space_center {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@mixin flex_col {
+  display: flex;
+  flex-direction: column;
+}
+@mixin flex_col_center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@mixin flex_col_center_center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin center_center {
+  align-items: center;
+  justify-content: center;
+}
+@mixin space_center {
+  justify-content: space-between;
+  align-items: center;
+}
+@mixin space_start {
+  justify-content: space-between;
+  align-items: flex-start;
+}
+@mixin space_end {
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+@mixin col_center {
+  flex-direction: column;
+  align-items: center;
+}
+@mixin col_center_center {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+@mixin col_start {
+  flex-direction: column;
+  align-items: flex-start;
+}
+@mixin col_end {
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+@mixin wrap_center {
+  flex-wrap: wrap;
+  align-items: center;
+}
+@mixin wrap_center_center {
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+@mixin wrap_space_center {
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+//----font
+@mixin f($s, $h, $w: false) {
+  @if ($w == n) {
+    font-weight: 400;
+  } @else if($w == b) {
+    font-weight: 600;
+  }
+  font-size: $s + px;
+  line-height: $h + px;
+}
+@mixin e($s, $h, $w: false) {
+  @if ($w == n) {
+    font-weight: 400;
+  } @else if($w == b) {
+    font-weight: 600;
+  }
+  font-size: $s + px;
+  line-height: $h + px;
+  @include en;
+}
+@mixin f12 {
+  font-size: 12px;
+  line-height: 16px;
+}
+@mixin f13 {
+  font-size: 13px;
+  line-height: 17px;
+}
+@mixin f14 {
+  font-size: 14px;
+  line-height: 20px;
+}
+@mixin f15 {
+  font-size: 15px;
+  line-height: 21px;
+}
+@mixin f16 {
+  font-size: 16px;
+  line-height: 22px;
+}
+@mixin f18 {
+  font-size: 18px;
+  line-height: 25px;
+}
+@mixin f20 {
+  font-size: 20px;
+  line-height: 28px;
+}
+@mixin f24 {
+  font-size: 24px;
+  line-height: 34px;
+}
+@mixin f28 {
+  font-size: 28px;
+  line-height: 39px;
+}
+@mixin b12 {
+  font-weight: 600;
+  @include f12;
+}
+@mixin b13 {
+  font-weight: 600;
+  @include f13;
+}
+@mixin b14 {
+  font-weight: 600;
+  @include f14;
+}
+@mixin b15 {
+  font-weight: 600;
+  @include f15;
+}
+@mixin b16 {
+  font-weight: 600;
+  @include f16;
+}
+@mixin b18 {
+  font-weight: 600;
+  @include f18;
+}
+@mixin b20 {
+  font-weight: 600;
+  @include f20;
+}
+@mixin b24 {
+  font-weight: 600;
+  @include f24;
+}
+@mixin b28 {
+  font-weight: 600;
+  @include f28;
+}
+@mixin e12 {
+  @include f12;
+  @include en;
+}
+@mixin e13 {
+  @include f13;
+  @include en;
+}
+@mixin e14 {
+  @include f14;
+  @include en;
+}
+@mixin e15 {
+  @include f15;
+  @include en;
+}
+@mixin e16 {
+  @include f16;
+  @include en;
+}
+@mixin e18 {
+  @include f18;
+  @include en;
+}
+@mixin e20 {
+  @include f20;
+  @include en;
+}
+@mixin e24 {
+  @include f24;
+  @include en;
+}
+@mixin e28 {
+  @include f28;
+  @include en;
+}
+@mixin em12 {
+  font-weight: 600;
+  @include e12;
+}
+@mixin em13 {
+  font-weight: 600;
+  @include e13;
+}
+@mixin em14 {
+  font-weight: 600;
+  @include e14;
+}
+@mixin em15 {
+  font-weight: 600;
+  @include e15;
+}
+@mixin em16 {
+  font-weight: 600;
+  @include e16;
+}
+@mixin em18 {
+  font-weight: 600;
+  @include e18;
+}
+@mixin em20 {
+  font-weight: 600;
+  @include e20;
+}
+@mixin em24 {
+  font-weight: 600;
+  @include e24;
+}
+@mixin em28 {
+  font-weight: 600;
+  @include e28;
+}
+
+@mixin img_scale {
+  width: 100%;
+  height: auto;
+  transform: inherit;
+  transition: all 0.3s ease;
+}
+@mixin img_fit {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@mixin trans_xy {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@mixin trans_x {
+  left: 50%;
+  transform: translateX(-50%);
+}
+@mixin trans_y {
+  top: 50%;
+  transform: translateY(-50%);
 }

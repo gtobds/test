@@ -15,27 +15,33 @@ function Footer() {
   const fncFooter = useCallback(() => {
     if (footRef.current) {
       const $foot = footRef.current;
+
       setFootHeight($foot.offsetHeight);
       setFootTop($foot.getBoundingClientRect().top + window.pageYOffset);
     }
   }, [setFootTop, setFootHeight]);
 
-  fncFooter();
-
   useEffect(() => {
-    //if (!footRef.current) return;
-    requestAnimationFrame(fncFooter); // 리액트 렌더링 루프 밖에서 상태 업데이트
+    let footUp;
+    const updateFoot = () => {
+      footUp = requestAnimationFrame(fncFooter); // 리액트 렌더링 루프 밖에서 상태 업데이트
+    };
 
     const observer = new ResizeObserver(() => {
-      fncFooter();
+      updateFoot();
     });
-    observer.observe(document.body);
+    if (document.querySelector('.container')) {
+      observer.observe(document.querySelector('.container'));
+    }
+
+    updateFoot();
 
     const timer = setTimeout(() => {
-      fncFooter();
+      updateFoot();
     }, 100);
 
     return () => {
+      cancelAnimationFrame(footUp);
       clearTimeout(timer);
       observer.disconnect();
     };

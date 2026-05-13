@@ -1,0 +1,27 @@
+.gdsTitle {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  span {
+    display: block;
+    @include x.hid_rel;
+  }
+  &-brd {
+    @include x.b15;
+    word-break: keep-all;
+  }
+  &-sales {
+    @include x.f(13, 18);
+    word-break: keep-all;
+  }
+  &-title {
+    color: v.$c-sb;
+    @include x.f15;
+    @include x.ellip(2);
+    word-break: keep-all;
+  }
+  &-num {
+    color: v.$c-gy500;
+    line-height: 20px;
+  }
+}

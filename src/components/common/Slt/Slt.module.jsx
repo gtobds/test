@@ -6,6 +6,7 @@ const cx = classname.bind(scss);
 
 const Slt = ({ id, sltData, label, classNm, size, place }) => {
   const [isVal, setIsVal] = useState('');
+  if (!sltData || sltData.length === 0) return null;
   return (
     <>
       <span className={cx('slt', size, classNm)}>

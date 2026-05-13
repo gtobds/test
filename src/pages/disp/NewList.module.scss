@@ -1,0 +1,53 @@
+.disp-outlet {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 160px;
+  color: v.$c-info;
+  font-weight: 600;
+  font-size: 24px;
+}
+
+.ank {
+  &-tab {
+    position: sticky;
+    top: 50px;
+    &_bx {
+      padding: 16px 0;
+      background: v.$c-fff;
+    }
+    ul {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      button {
+        padding: 8px 16px;
+        border: 1px solid v.$c-dis;
+        border-radius: 4px;
+        font-weight: 600;
+        &[aria-selected='true'] {
+          border-color: blue;
+          color: blue;
+        }
+      }
+    }
+  }
+  &-cont {
+    &_bx {
+      padding-top: 24px;
+      .title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 80px;
+        background: v.$c-light;
+        font-weight: 600;
+        font-size: 20px;
+      }
+      .cont {
+        min-height: 500px;
+      }
+    }
+  }
+}

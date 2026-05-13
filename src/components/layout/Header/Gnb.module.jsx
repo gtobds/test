@@ -1,6 +1,4 @@
 import React from 'react';
-
-//isActive 속성 사용가능, aria-current="page" 자동설정해줌
 import { NavLink } from 'react-router';
 
 import classname from 'classnames/bind';

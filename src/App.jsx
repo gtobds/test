@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { RouterProvider } from 'react-router';
-//import { LayerProvider } from './contexts/layerContext';
+import { useCateStore } from './stores/useCateStore';
+
 import { Layers } from '@/components/common/Layers/Layers.module.jsx';
 
 import Router from '@/routes/Routes';
@@ -10,13 +11,16 @@ import '@/styles/reset.scss';
 import '@/styles/layout.scss';
 
 const App = () => {
+  const fetchCate = useCateStore((state) => state.fetchCate);
+  useEffect(() => {
+    fetchCate();
+  }, [fetchCate]);
+
   return (
-    //<LayerProvider>
-    <div className='wrap'>
+    <div className='wrap' data-point='p-color_0' data-cont='base'>
       <RouterProvider router={Router} />
       <Layers />
     </div>
-    //</LayerProvider>
   );
 };
 

@@ -51,6 +51,9 @@ jsconfig.json -----------------------------
 자동경로 추적을 위함
 
 
+Open Localhost Links - 체크해제
+
+
 package.json ----------------------------------
 
   "prettier": {

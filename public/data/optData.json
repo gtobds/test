@@ -1,0 +1,9 @@
+{
+  "optData": [
+    { "label": "Black", "subText": "12/31 출고", "isOutOfStock": false },
+    { "label": "White", "subText": "재고 5개", "isOutOfStock": false },
+    { "label": "Red", "subText": "", "isOutOfStock": false },
+    { "label": "Blue", "subText": "", "isOutOfStock": true },
+    { "label": "Gray", "subText": "", "isOutOfStock": false }
+  ]
+}

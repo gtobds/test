@@ -43,6 +43,7 @@ npm install swiper           swiper 라이브러리
 npm install react-router       라우터v7 라이브러리
 npm install framer-motion    모션관련
 npm install zustand            전역상태관리
+npm install axios               API 데이터통신
 
 
 크롬에 react-developer-tools  확장프로그램 설치
@@ -72,6 +73,7 @@ vscode 소스제어에서 깃허브에 게시 - 커밋푸시(메시지입력하�
 
 
 다른컴에서 F1키 - git clone - 내가 게시한 git선택
+열기/추가 등등에서 열기선택 - 클론된 폴더 바로사용
 
 클론이후 해당폴더에 node모듈이 없으므로 npm install
 

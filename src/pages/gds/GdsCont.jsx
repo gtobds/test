@@ -1,6 +1,9 @@
 //import { useLayer } from '@/contexts/layerContext';
+import { useState, useEffect } from 'react';
+import axios from 'axios';
+
 import { useLayerStore } from '@/stores/useLayerStore';
-import { useState } from 'react';
+import { useCateStore } from '@/stores/useCateStore';
 
 import classname from 'classnames/bind';
 import scss from './Gds.module.scss';
@@ -22,19 +25,14 @@ import RdoList from '@/components/common/RdoList/RdoList.module';
 import Slt from '@/components/common/Slt/Slt.module';
 import Txta from '@/components/common/Txta/Txta.module';
 import NtcLst from '@/components/common/NtcLst/NtcLst.module';
+import Tree from '@/components/common/Tree/Tree.module';
 
 const GdsCont = () => {
   //layerContext 사용
   //const { openLayer } = useLayer();
-  const openLayer = useLayerStore((state) => state.openLayer);
 
-  const colorOptions = [
-    { label: 'Black', subText: '12/31 출고', isOutOfStock: false },
-    { label: 'White', subText: '재고 5개', isOutOfStock: false },
-    { label: 'Red', subText: '', isOutOfStock: false },
-    { label: 'Blue', subText: '', isOutOfStock: true }, // 품절 상태
-    { label: 'Gray', subText: '', isOutOfStock: false },
-  ];
+  const openLayer = useLayerStore((state) => state.openLayer);
+  const tree = useCateStore((state) => state.cateList);
 
   const [isTab, setIsTab] = useState(1);
   const tabInit = { id: 'sample', prefix: 'pannel_', start: isTab };
@@ -52,11 +50,31 @@ const GdsCont = () => {
     { id: 'rdo_2', label: 'disabled', disabled: true },
     { id: 'rdo_3', label: 'checked disabled', checked: true, disabled: true },
   ];
-  const sltData = [
-    { id: 's_0', value: 'apple', text: '사과' },
-    { id: 's_1', value: 'banana', text: '바나나' },
-    { id: 's_2', value: 'orange', text: '오렌지' },
-  ];
+
+  const [slt, setSlt] = useState([]);
+  const [optSlt, setOptSlt] = useState([]);
+  useEffect(() => {
+    axios
+      .all([axios.get(new URL('/data/sltData.json', import.meta.url).href), axios.get(new URL('/data/optData.json', import.meta.url).href)])
+      .then(
+        axios.spread((slt, opt) => {
+          setSlt(slt.data.sltData);
+          setOptSlt(opt.data.optData);
+        }),
+      )
+      .catch((error) => console.log(error));
+  }, []);
+
+  // useEffect(() => {
+  //   axios
+  //     .get(new URL('/data/optData.json', import.meta.url).href)
+  //     .then((response) => {
+  //       setOptSlt(response.data.optData);
+  //     })
+  //     .catch((error) => {
+  //       console.error('파일을 불러오는데 실패했습니다:', error);
+  //     });
+  // }, []);
 
   return (
     <>
@@ -96,22 +114,20 @@ const GdsCont = () => {
             <Txta classNm='gd-txta' name='txta' id='txta_0' max={1000} place='최소 10자 이상 입력해 주세요.' />
           </li>
         </ul>
-        {/* 옵션레이어 샘플 */}
+        {/* 옵션레이어 샘플 optSlt 데이터가 들어온이후 렌더링한다*/}
         <ul className={cx('inp-set')}>
-          <li>
-            <OptSlt id='color_opt_0' options={colorOptions} classNm='gds-opt' select={1} lyrSpeed={0.2} />
-          </li>
+          <li>{optSlt.length > 0 && <OptSlt id='color_opt_0' options={optSlt} classNm='gds-opt' select={1} lyrSpeed={0.2} />}</li>
         </ul>
         {/* 셀렉트박스 */}
         <ul className={cx('inp-set')}>
           <li>
-            <Slt id='slt_0' sltData={sltData} classNm='gds-slt' label='선택' place='placeholder - 선택하세요' />
+            <Slt id='slt_0' sltData={slt} classNm='gds-slt' label='선택' place='placeholder - 선택하세요' />
           </li>
           <li>
             <label htmlFor='slt_1' className={cx('gds-inp_label')}>
               외부 label
             </label>
-            <Slt id='slt_1' sltData={sltData} classNm='gds-slt' size='sd' place='placeholder - 선택하세요' />
+            <Slt id='slt_1' sltData={slt} classNm='gds-slt' size='sd' place='placeholder - 선택하세요' />
           </li>
         </ul>
         {/* 탭 샘플 */}
@@ -200,6 +216,10 @@ const GdsCont = () => {
               <span>신용카드로 결제하시는 경우 일반할부로 결제되오니 반드시 참고하시기 바랍니다.</span>
             </NtcLst>
           </li>
+        </ul>
+        {/* Tree */}
+        <ul className={cx('inp-set')}>
+          <li>{tree.length > 0 && <Tree treeData={tree} classNm='gd-tree' speed={0.3} />}</li>
         </ul>
       </div>
       <br />

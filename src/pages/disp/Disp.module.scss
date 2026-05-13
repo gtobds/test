@@ -7,3 +7,15 @@
   font-weight: 600;
   font-size: 24px;
 }
+
+.gds-test {
+  padding: 60px 80px 180px;
+  @include x.flex_center_center;
+  flex-wrap: wrap;
+  gap: 16px;
+  :global {
+    .test-img {
+      width: 300px;
+    }
+  }
+}

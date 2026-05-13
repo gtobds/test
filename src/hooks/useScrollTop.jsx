@@ -14,10 +14,10 @@ export const useScrollTop = (limit = 0) => {
       }
     };
     window.addEventListener('scroll', fnSetScroll);
-
+    window.addEventListener('resize', fnSetScroll);
     return () => {
-      // 언마운트시해제
       window.removeEventListener('scroll', fnSetScroll);
+      window.removeEventListener('resize', fnSetScroll);
     };
   }, [limit]);
 

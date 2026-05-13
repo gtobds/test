@@ -13,6 +13,9 @@ const OptSlt = ({ id, options, classNm, select = 0, lyrSpeed = 0 }) => {
 
   const sltRef = useRef(null);
 
+  //데이터가 없으면 렌더링 방지
+  if (!options || options.length === 0) return null;
+
   const toggleDropdown = () => setIsOpen(!isOpen);
 
   // 바깥 클릭시 커스텀훅 호출 - ref객체, 실행할 함수
@@ -20,7 +23,7 @@ const OptSlt = ({ id, options, classNm, select = 0, lyrSpeed = 0 }) => {
 
   const handleSelect = (idx, e) => {
     e.preventDefault();
-    if (options[idx].isOutOfStock) return; // 품절 시 클릭 방지
+    if (options[idx].isOutOfStock) return;
     setSelectedIdx(idx);
     setIsOpen(false);
   };

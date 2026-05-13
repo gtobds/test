@@ -1,5 +1,5 @@
-import React, { useState, useRef } from 'react';
-//import { useLayer } from '@/contexts/layerContext';
+import { NavLink } from 'react-router';
+import { useState } from 'react';
 import { useLayerStore } from '@/stores/useLayerStore';
 import { useScrollTop } from '@/hooks/useScrollTop.jsx';
 
@@ -7,7 +7,8 @@ import classname from 'classnames/bind';
 import scss from './Header.module.scss';
 const cx = classname.bind(scss);
 
-import Gnb from '@/components/layout/Header/Gnb.module.jsx';
+import Gnb from './Gnb.module.jsx';
+import CtgLayer from './CtgLayer.module';
 import Btn from '@/components/common/Btn/Btn.module.jsx';
 
 import LayerGds_1 from '@/pages/common/layers/LayerGds_1.jsx';
@@ -15,22 +16,10 @@ import LayerGds_1 from '@/pages/common/layers/LayerGds_1.jsx';
 let isLog = true;
 
 const Header = ({ name = '삼성', sub = '플라자', ctg }) => {
-  //const cartRef = useRef(null); // 클래스 셀렉터 대신 ref 사용
-
   const isScrollTop = useScrollTop(82);
 
   const [isCart, setCart] = useState(false);
   const fnAddCart = (nm) => {
-    //ref객체 선택시 반드시 current로
-    /*
-    if (cartRef.current.classList.contains("active")) {
-      alert(nm + " 상품을 장바구니에서 삭제하였습니다.");
-      cartRef.current.classList.remove("active");
-    } else {
-      alert(nm + " 상품이 장바구니에 담겼습니다.");
-      cartRef.current.classList.add("active");
-    }
-    */
     setCart(!isCart);
     if (!isCart) {
       console.log(nm + ' 상품을 장바구니에서 삭제하였습니다.');
@@ -39,20 +28,18 @@ const Header = ({ name = '삼성', sub = '플라자', ctg }) => {
     }
   };
 
-  //layerContext 사용
-  //const { openLayer } = useLayer();
   const openLayer = useLayerStore((state) => state.openLayer);
 
   return (
     <>
       <div className={cx('header', { 'hd-compact': isScrollTop })} role='banner'>
         <div className={cx('head')}>
+          <CtgLayer />
           <h1 className={cx('head-logo')}>
-            <a href='#' style={{ width: 'auto', height: '50px' }}>
+            <NavLink to='/' style={{ width: 'auto', height: '50px' }}>
               <img src={new URL('@/assets/images/common/logo_ak.svg', import.meta.url).href} alt={name + ' ' + sub} />
               <span className={cx('head-logo__sub')}>{ctg}</span>
-            </a>
-
+            </NavLink>
             <div className='btn-set'>
               {isLog ? (
                 <>

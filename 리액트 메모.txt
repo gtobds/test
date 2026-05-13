@@ -57,6 +57,8 @@ inpt의 value는 onChange가 무조건 있어야함.
 
 value={val} onChange={(e) => setVal(e.target.value)} 
 
+a태그대신 Link 컴포넌트(react-router) 사용 - 추후 Next.js 라우팅에 중요함
+네비게이션등의 active가 필요한 a태그는  NavLink 컴포넌트(react-router) 사용
 
 
 데이터바인딩 {변수명}
@@ -106,6 +108,7 @@ className={cx('btn', size, { add: isAdd })}
 
 **.module.scss의 module 빼면  해싱 안되는 파일 됨
 
+해싱된 하위클래스 접근시 [class*='gd'] 형식셀렉터 적극활용
 
 
 ------------Props----------------

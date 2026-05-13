@@ -1,0 +1,10 @@
+{
+  "sltData": [
+    { "id": "s_0", "value": "pink", "text": "핑크" },
+    { "id": "s_1", "value": "blue", "text": "블루" },
+    { "id": "s_2", "value": "orange", "text": "오렌지" },
+    { "id": "s_3", "value": "white", "text": "화이트" },
+    { "id": "s_4", "value": "brown", "text": "브라운" },
+    { "id": "s_5", "value": "beige", "text": "베이지" }
+  ]
+}

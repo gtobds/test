@@ -1,0 +1,71 @@
+{
+  "goodsData": [
+    {
+      "id": "gd_0",
+      "link": "#",
+      "src": "/images/temp/img_872x872_7.jpg",
+      "sub": "/images/temp/img_872x872_6.jpg",
+      "brd": "BURBERRY",
+      "title": "BURBERRY 금장 패딩 남성용 봄버 숏 패딩 블랙퍼 점퍼 자켓",
+      "sales": "최대60% SALE ★ 23년 봄 신상품 출시!",
+      "rm": 24,
+      "prc": 150800,
+      "ori": 200000,
+      "tag": [
+        { "id": "new", "name": "신제품" },
+        { "id": "rsv", "name": "예약상품" },
+        { "id": "dlv", "name": "무료배송" }
+      ],
+      "star": 4.5,
+      "review": 334,
+      "wish": true
+    },
+    {
+      "id": "gd_1",
+      "link": "#",
+      "src": "/images/temp/img_508x508_1.jpg",
+      "sub": "/images/temp/img_508x508_2.jpg",
+      "brd": "BURBERRY",
+      "title": "BURBERRY 금장 패딩 남성용 봄버 숏 패딩 블랙퍼 점퍼 자켓",
+      "sales": "최대60% SALE ★ 23년 봄 신상품 출시!",
+      "rm": 24,
+      "prc": 150800,
+      "ori": 200000,
+      "tag": [
+        { "id": "new", "name": "신제품" },
+        { "id": "rsv", "name": "예약상품" },
+        { "id": "dlv", "name": "무료배송" }
+      ],
+      "star": 4.5,
+      "review": 334,
+      "wish": false
+    },
+    {
+      "id": "gd_2",
+      "link": "#",
+      "src": "/images/temp/img_374x374_25.jpg",
+      "brd": "BURBERRY",
+      "title": "BURBERRY 금장 패딩 남성용 봄버 숏 패딩 블랙퍼 점퍼 자켓",
+      "sales": "최대60% SALE ★ 23년 봄 신상품 출시!",
+      "rm": 24,
+      "prc": 150800,
+      "ori": 200000,
+      "tag": [
+        { "id": "new", "name": "신제품" },
+        { "id": "rsv", "name": "예약상품" },
+        { "id": "dlv", "name": "무료배송" }
+      ],
+      "star": 4.5,
+      "review": 334,
+      "wish": false
+    },
+    {
+      "id": "gd_3",
+      "link": "#",
+      "src": "/images/temp/img_374x374_24.jpg",
+      "title": "BURBERRY 금장 패딩 남성용 봄버 숏 패딩 블랙퍼 점퍼 자켓",
+      "prc": 150800,
+      "wish": false
+    }
+  ]
+}

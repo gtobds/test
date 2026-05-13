@@ -1,0 +1,17 @@
+.gdsTags {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px;
+  em {
+    flex: none;
+    display: flex;
+    align-items: flex-end;
+    height: 18px;
+    padding: 0 4px;
+    border: v.$c-gy300 1px solid;
+    color: v.$c-sb;
+    @include x.f(11, 15);
+    box-sizing: border-box;
+  }
+}

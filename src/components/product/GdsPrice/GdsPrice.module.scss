@@ -1,0 +1,39 @@
+.gdsPrice {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0 6px;
+  &-rm {
+    @include x.em16;
+    b {
+      font-weight: 600;
+    }
+  }
+  &-prc {
+    display: flex !important;
+    align-items: center;
+    gap: 2px;
+    b {
+      @include x.em16;
+    }
+    em {
+      line-height: 20px;
+    }
+  }
+  &-ori {
+    color: v.$c-gy500;
+    text-decoration: line-through;
+    @include x.em14;
+    b {
+      font-weight: 400;
+    }
+  }
+  &-stock {
+    color: v.$c-gy500;
+    @include x.f13;
+  }
+  &-num {
+    color: v.$c-info;
+    line-height: 20px;
+  }
+}
