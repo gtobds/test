@@ -9,6 +9,7 @@ Sass (.sass only)
 Path Intellisense
 Dracula Theme
 vscode-icons-mac
+Project Manager
 
 -----------------vscode -  설정관련( Ctrl + , ) --------------
 
@@ -100,4 +101,31 @@ Shift + Alt  + 방향키 위/아래  -  복사
 
 열린파일경로가져오기 - 경로입력부분으로 끌고 오면서 Shift키 누르면서 드롭다운
 
+
+---------- javascriptreact.json  파일에서 커스텀 스니펫
+
+{
+  "React Component": {
+    "prefix": "comp",
+    "body": [
+      "import { useState } from 'react';",
+      "",
+			"import classname from 'classnames/bind';",
+      "import scss from './${TM_FILENAME_BASE}.module.scss';",
+			"const cx = classname.bind(scss);",
+      "",
+			"const ${TM_FILENAME_BASE} = () => {",
+      "  return (",
+      "    <>",
+      "     <div className={cx('${TM_FILENAME_BASE}')}></div>",
+      "      $0",
+      "    </>",
+      "  );",
+      "}",
+      "",
+			"export default ${TM_FILENAME_BASE};"
+    ],
+    "description": "Create Component with SCSS"
+  }
+}
 

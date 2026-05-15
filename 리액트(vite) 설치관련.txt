@@ -41,6 +41,7 @@ npm add -D sass-embedded   SASS패키지
 npm install classnames       classnames 라이브러리
 npm install swiper           swiper 라이브러리
 npm install react-router       라우터v7 라이브러리
+npm install react-router-dom 
 npm install framer-motion    모션관련
 npm install zustand            전역상태관리
 npm install axios               API 데이터통신
@@ -76,6 +77,8 @@ vscode 소스제어에서 깃허브에 게시 - 커밋푸시(메시지입력하�
 열기/추가 등등에서 열기선택 - 클론된 폴더 바로사용
 
 클론이후 해당폴더에 node모듈이 없으므로 npm install
+
+플젝 진행하면서 추가한 모듈들 설치하기
 
 깃이메일,네임 설정안되어있을시 커밋안됨
 git config --global user.email "you@pionnet.co.kr"
